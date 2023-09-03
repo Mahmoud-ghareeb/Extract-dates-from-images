@@ -23,11 +23,13 @@ first i split the data into train, test and validation
 each set has two elements (image path, encoded text)  
 
 after that i created a tf.data.Dataset that return dictionary of 
+```
 {
     'enc_inputs': the image tensor of shape (None, 80, 250, 3),
     'dec_inputs': date input to decoder in the form of 'G' + the date
-    'labels': decoder output in the form of date + 'E'
-}
+},
+'labels' => decoder output in the form of date + 'E'
+```
 
 G and E stands for (GO) and (End) for starting and ending the generation
 
