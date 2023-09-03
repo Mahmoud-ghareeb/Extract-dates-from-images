@@ -1,6 +1,6 @@
 # Extract dates from images with 100% accuracy on test set
 
-I will divide the problem into 7 steps
+I divided the problem into 7 steps
 
 1. Process the data
 2. Make a tf dataset
