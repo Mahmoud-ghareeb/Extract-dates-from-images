@@ -53,8 +53,21 @@ for training i used the following
 
 # Convert The Model Into TF_LITE and ONNX
 
-after training done i converted the model into tf_lite format and the hall size of the model decreases   
-<em>from 14 mb to 1.5 mb</em> and inference time <em>from 2.1 sec to 135 ms</em>
+after training done i converted the model into tf_lite format the hall size of the model decreases   
+<b>from 14 mb to 1.5 mb</b> and inference time <b>from 2.1 sec to 135 ms</b>
 
+# Inference Code
 
+Write Inference Code
 
+# Build An Endpoint Using Flask
+
+run the script using
+```` python
+python app.py
+````
+
+then send a post request with an <b>image</b> as key and an image file as a value to the endpoint
+````
+http://127.0.0.1:5000/extract_date
+````
