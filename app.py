@@ -70,9 +70,8 @@ def inference(img):
         return tokens[1:]
 
     date = date(img)
-    en_to_ar = { '0': '٠', '1': '١', '2': '٢', '3': '٣', '4': '٤', '5': '٥', '6': '٦', '7': '٧', '8': '٨', '9': '٩',  '/': '/'}
 
-    return ''.join([en_to_ar[i] for i in date]), ''.join(date)
+    return ''.join(date), ''.join(date)
 
 @app.route('/extract_date', methods=['POST'])
 def extract_date():
@@ -82,7 +81,7 @@ def extract_date():
     image = request.files['image']
     date, en_date = inference(image)
 
-    return jsonify({"success": True, "date_ar": date, "date_en": en_date})
+    return jsonify({"success": True, "date": date})
 
 if __name__ == '__main__':
     app.run(debug=True)

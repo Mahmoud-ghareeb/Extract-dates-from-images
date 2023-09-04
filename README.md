@@ -15,7 +15,7 @@ I divided the problem into 7 steps
 we have 2 types of data (image, text)
 1. the images have a shape of (80, 500, 3)  
     the images has a big background that has no information so i cropped it and it becomes of a shape (80, 250, 3)
-2. for the text the sequence length is 10 so i just converted the arabic numbers into english numbers
+2. for the text the sequence length is 10 so not preprocessing needed
 
 # Building The Dataset
 
